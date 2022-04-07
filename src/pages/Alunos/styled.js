@@ -19,8 +19,8 @@ export const StudentConatiner = styled.div`
 
 export const ProfilePicture = styled.div`
   img {
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     cursor: pointer;
     transition: all 1.5s;

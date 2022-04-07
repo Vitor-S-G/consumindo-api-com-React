@@ -97,23 +97,23 @@ export default function Aluno({ match }) {
       if (id) {
         //editando
         await axios.put(`/alunos/${id}`, {
-          name,
-          lastName,
+          nome: name,
+          sobrenome: lastName,
           email,
           idade,
-          weight,
-          height,
+          peso: weight,
+          altura: height,
         });
         toast.success(`Aluno(a) editado(a) com sucesso`);
       } else {
         // criando
         const { data } = await axios.post(`/alunos/`, {
-          name,
-          lastName,
+          nome: name,
+          sobrenome: lastName,
           email,
           idade,
-          weight,
-          height,
+          peso: weight,
+          altura: height,
         });
         toast.success(`Aluno(a) criado(a) com sucesso`);
         history.push(`/aluno/${data.id}/edit`);

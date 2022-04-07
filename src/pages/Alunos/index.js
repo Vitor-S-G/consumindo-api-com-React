@@ -36,8 +36,8 @@ export default function Alunos() {
 
   const handleDelete = async (e) => {
     e.persist();
+    setIsLoading(true);
     try {
-      setIsLoading(true);
       await axios.delete(`/alunos/${id}`);
       const novosAlunos = [...alunos];
       novosAlunos.splice(index, 1);
@@ -55,6 +55,7 @@ export default function Alunos() {
       }
     }
     setIsDelete(false);
+    setIsLoading(false);
   };
 
   const notDelete = () => setIsDelete(false);
